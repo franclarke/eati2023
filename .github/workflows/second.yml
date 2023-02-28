@@ -1,0 +1,33 @@
+name: Second
+on: 
+  push:
+    branches: [ "workflows2" ]
+jobs:
+  job1:
+    name: "Trabajo 1"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - run: python eati.py "Workflow" "Dependencies"
+  job2:
+    name: "Trabajo 2"
+    runs-on: windows-2019
+    steps:
+      - run: Get-Command
+  job3:
+    needs: job1
+    name: "Trabajo 3"
+    runs-on: ubuntu-20.04
+    steps:
+      - run: bash env
+  job4:
+    name: "Trabajo 4"
+    runs-on: ubuntu-20.04
+    steps:
+      - run: cat /etc/*release
+  job5:
+    needs: [job3, job4]
+    name: "Trabajo 5"
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "Fin workflow"
