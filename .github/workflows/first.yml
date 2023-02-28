@@ -3,9 +3,9 @@ on: [ "push" ]
 jobs:
   job1:
     name: 'Mi primer job'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+    runs-on: windows-latest
+    run: python eati.py "EATI" "2023"
   job2:
     name: 'Mi segundo job'
     runs-on: windows-latest
+    run: python eati.py "Mi nombre es Francisco\n" "Estoy haciendo un curso de GitHub Actions"
