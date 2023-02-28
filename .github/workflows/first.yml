@@ -14,4 +14,6 @@ jobs:
     steps:
       - name: "Mi segundo job"
         uses: actions/checkout@v3
-      - run: python eati.py "Mi nombre es Francisco\n" "Estoy haciendo un curso de GitHub Actions"
+      - run: |
+              echo "Mi nombre es Francisco" 
+              echo "Estoy haciendo un curso de GitHub Actions"
