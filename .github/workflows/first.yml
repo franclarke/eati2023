@@ -6,10 +6,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: "Mi primer job"
-        run: python eati.py "EATI" "2023"
+        uses: actions/checkout@v3
+      - run: python eati.py "EATI" "2023"
   job2:
     name: "Mi segundo job"
     runs-on: windows-latest
     steps:
       - name: "Mi segundo job"
-        run: python eati.py "Mi nombre es Francisco\n" "Estoy haciendo un curso de GitHub Actions"
+        uses: actions/checkout@v3
+      - run: python eati.py "Mi nombre es Francisco\n" "Estoy haciendo un curso de GitHub Actions"
