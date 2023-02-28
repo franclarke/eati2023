@@ -1,11 +1,15 @@
 name: First
-on: [ "push" ]
+on: [push]
 jobs:
   job1:
-    name: 'Mi primer job'
+    name: "Mi primer job"
     runs-on: windows-latest
-    run: python eati.py "EATI" "2023"
+    steps:
+      - name: "Mi primer Job"
+        run: python eati.py "EATI" "2023"
   job2:
-    name: 'Mi segundo job'
+    name: "Mi segundo job"
     runs-on: windows-latest
-    run: python eati.py "Mi nombre es Francisco\n" "Estoy haciendo un curso de GitHub Actions"
+    steps:
+      - name: "Mi segundo job"
+        run: python eati.py "Mi nombre es Francisco\n" "Estoy haciendo un curso de GitHub Actions"
