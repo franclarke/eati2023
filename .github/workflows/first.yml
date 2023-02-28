@@ -1,15 +1,21 @@
 name: First
-on: [push]
+on:
+  push:
+    branches: [main] # Ejecuta la acción solo en la rama "main"
 jobs:
   job1:
     name: "Mi primer job"
     runs-on: windows-latest
     steps:
-      - name: "Mi primer Job"
+      - name: "Descargar código fuente"
+        uses: actions/checkout@v2
+      - name: "Ejecutar programa Python con parámetros EATI y 2023"
         run: python eati.py "EATI" "2023"
   job2:
     name: "Mi segundo job"
     runs-on: windows-latest
     steps:
-      - name: "Mi segundo job"
+      - name: "Descargar código fuente"
+        uses: actions/checkout@v2
+      - name: "Ejecutar programa Python con parámetros de texto"
         run: python eati.py "Mi nombre es Francisco\n" "Estoy haciendo un curso de GitHub Actions"
