@@ -1,0 +1,11 @@
+name: First
+on: [ "push" ]
+jobs:
+  job1:
+    name: 'Mi primer job'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+  job2:
+    name: 'Mi segundo job'
+    runs-on: windows-latest
