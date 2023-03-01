@@ -10,12 +10,12 @@ jobs:
     name: "Trabajo 1"
     runs-on: ubuntu-latest
     env:
-      JOB_VARIABLE: { "env.SCOPE" }
+      JOB_VARIABLE: ${{ env.SCOPE }}
       SCOPE: "Primer nuevo valor de scope"
     steps:
       - name: "Primer step"
         env:
-          STEP_VARIABLE: { "env.SCOPE" }
+          STEP_VARIABLE: ${{ env.SCOPE }}
           SCOPE: "Segundo nuevo valor de scope"
         run: |
             echo $WORKFLOW_VARIABLE
