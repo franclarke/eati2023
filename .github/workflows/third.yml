@@ -1,4 +1,4 @@
-name: Second
+name: Third
 on: 
   push:
     branches: [ "workflow3" ]
@@ -12,10 +12,6 @@ jobs:
           repository: jmoyano/eati2023
           ref: main
           path: ./main
-  job2:
-    name: "Trabajo 2"
-    runs-on: ubuntu-20.04
-    steps:
       - uses: actions/checkout@v3
         with:
           repository: jmoyano/eati2023
