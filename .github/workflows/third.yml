@@ -22,8 +22,5 @@ jobs:
           repository: jmoyano/eati2023
           ref: anotherbranch
           path: ./anotherbranch
-      - run: cat ./message.txt
-        with:
-          repository: jmoyano/eati2023
-          ref: main
-          path: ./main
+      - run: cat ./anotherbranch/message.txt
+      - run: cat ./main/message.txt
