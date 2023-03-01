@@ -1,7 +1,7 @@
 name: Second
 on: 
   push:
-    branches: [ "workflows2" ]
+    branches: [ "workflow3" ]
 jobs:
   job1:
     name: "Trabajo 1"
