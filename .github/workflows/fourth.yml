@@ -3,8 +3,8 @@ on:
   push:
     branches: ["workflow4"]
 env:
-  WORKFLOW_VARIABLE: "variable WORKFLOW_VARIABLE"
-  SCOPE: "variable SCOPE"
+  WORKFLOW_VARIABLE: 'variable WORKFLOW_VARIABLE'
+  SCOPE: 'variable SCOPE'
 jobs:
   job1:
     name: "Trabajo 1"
