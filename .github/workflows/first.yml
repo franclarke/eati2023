@@ -1,5 +1,7 @@
 name: First
-on: [push]
+on: 
+  push:
+    branches: [ "myfirstworkflow" ]
 jobs:
   job1:
     name: "Mi primer job"
