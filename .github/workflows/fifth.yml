@@ -1,0 +1,11 @@
+name: Fifth
+on:
+  push:
+    branches: ["workflow5"]
+jobs:
+  job1:
+    name: "Trabajo 1"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Primer step"
+        run: echo $sectrets.SECRET_KEY
