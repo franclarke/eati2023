@@ -1,0 +1,19 @@
+name: Second
+on: 
+  push:
+    branches: [ "workflow3" ]
+jobs:
+  job1:
+    name: "Trabajo 1"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: jmoyano/eati2023
+          ref: main
+          path: ./main
+      - uses: actions/checkout@v3
+        with:
+          repository: jmoyano/eati2023
+          ref: anotherbranch
+          path: ./anotherbranch
