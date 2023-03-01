@@ -1,0 +1,31 @@
+name: Fourth
+
+on:
+  push:
+    branches: ["workflow4"]
+
+env:
+  WORKFLOW_VARIABLE: "variable WORKFLOW_VARIABLE"
+  SCOPE: "variable SCOPE"
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    env:
+      JOB_VARIABLE: { "env.SCOPE" }
+      SCOPE: "Primer nuevo valor de scope"
+    steps:
+      - name: "Imprimir variables"
+        env:
+          STEP_VARIABLE: { "env.SCOPE" }
+          SCOPE: "Segundo nuevo valor de scope"
+      - run: |
+            echo $WORKFLOW_VARIABLE
+            echo $JOB_VARIABLE
+            echo $STEP_VARIABLE
+            echo $SCOPE
+      - run: echo $SCOPE
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $SCOPE
