@@ -34,9 +34,9 @@ jobs:
     - name: Run test
       run: |
           chmod +x main
-          declare -i output = $(./main)
-          if ["$output" -eq 0]; then
+          declare -i output=$(./main)
+          if [ "$output" -eq 0 ]; then
             echo "Exito"
           else
-            echo "Error"
+           echo "Error"
           fi
