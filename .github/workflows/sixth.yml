@@ -33,7 +33,9 @@ jobs:
       run: ls
     - name: Run test
       run: |
-        if ./main; then
+
+        output = $(./main)
+        if ["$output" -eq 0]; then
           echo "Exito"
         else
           echo "Error"
