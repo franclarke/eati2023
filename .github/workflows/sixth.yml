@@ -17,7 +17,7 @@ jobs:
       - name: compilar main
         run: gcc main.c -o main
       - name: upload articfact
-        uses: actions/articfact-upload@v2
+        uses: actions/upload-articfact@v3
         with:
           name: main
           path: ./main
