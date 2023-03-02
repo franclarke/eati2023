@@ -34,7 +34,7 @@ jobs:
     - name: Run test
       run: |
         if ./main; then
-          echo "Success"
+          echo "Exito"
         else
           echo "Error"
         fi
