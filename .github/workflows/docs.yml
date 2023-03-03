@@ -1,6 +1,7 @@
   name: First
 on: 
   push:
+    branches: ["workflow6"]
 jobs:
   doc:
     runs-on: ubuntu-latest
